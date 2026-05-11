@@ -1,11 +1,11 @@
-import useFetch from "./hooks/useFetch"
-
+import { Fragment } from "react/jsx-runtime"
+import ProductCards from "./components/productCards"
 function App() {
 
   return (
-    <>
-     {useFetch()}
-    </>
+    <Fragment>
+      <ProductCards />
+    </Fragment>
   )
 }
 
