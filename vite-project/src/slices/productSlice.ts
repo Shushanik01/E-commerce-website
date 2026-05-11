@@ -25,7 +25,7 @@ export const fetchProducts = createAsyncThunk(
 );
 
 const productSlice = createSlice({
-    name: 'productSlice',
+    name: 'products',
     initialState,
     reducers:{},
     extraReducers:(builder)=>{
@@ -39,8 +39,9 @@ const productSlice = createSlice({
             state.data = action.payload
         })
         .addCase(fetchProducts.rejected, (state, action)=>{
-            state.error = action.payload || 'Something went wrong!';
+            state.error = action.payload || action.error.message;
             state.loading = false
         })
     }
 })
+export default productSlice.reducer;
