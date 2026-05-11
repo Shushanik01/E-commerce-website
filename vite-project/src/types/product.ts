@@ -9,4 +9,6 @@ export interface productData {
         rate: number,
         count: number
     }
-}
+};
+
+// export type RootState = ReturnType<typeof store.getState>
