@@ -13,9 +13,10 @@ function App() {
     <Fragment>
       <Provider store={store}>
         <Routes>
-          <Route path="/" element={<Layout/>}/>
-          <Route index element={<Products/>}/>
-          <Route path="/cart" element = {<CartPage/>} />
+          <Route path="/" element={<Layout/>}>
+            <Route index element={<Products/>}/>
+            <Route path="cart" element={<CartPage/>}/>
+          </Route>
         </Routes>
       </Provider>
     </Fragment>

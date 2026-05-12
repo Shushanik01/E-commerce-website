@@ -7,18 +7,18 @@ const Header = () => {
 
     return (
         <Fragment>
-            <div className={styles.logo}>
-                 <nav>
-                    <ul>
+            <header className={styles.header}>
+                <span className={styles.logo}>ShopZone</span>
+                <nav className={styles.nav}>
+                    <ul className={styles.navList}>
                         <li>Man's clothing</li>
                         <li>Woman's clothing</li>
                         <li>Jewelery</li>
                         <li>Electronics</li>
                     </ul>
-                    <span>View Cart</span>
-                 </nav>
-            </div>
-           
+                    <span className={styles.viewCart}>View Cart</span>
+                </nav>
+            </header>
         </Fragment>
     )
 }

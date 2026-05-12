@@ -11,7 +11,7 @@ const Layout = ()=>{
         <>
             <Header/>
 
-            {location.pathname !== 'cart' && <CartBar/>}
+            {location.pathname !== '/cart' && <CartBar/>}
 
             <main>
                 <Outlet/>

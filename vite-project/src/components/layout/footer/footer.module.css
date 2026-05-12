@@ -1,0 +1,95 @@
+.footer {
+    background-color: #000;
+    color: #ccc;
+    width: 100%;
+    padding: 48px 40px 24px;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #222;
+}
+
+.brand .logo {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.brand p {
+    font-size: 0.85rem;
+    color: #888;
+    max-width: 220px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.column h4 {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+}
+
+.column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column ul li {
+    font-size: 0.85rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.column ul li:hover {
+    color: #fff;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 20px;
+}
+
+.bottom p {
+    font-size: 0.78rem;
+    color: #555;
+    margin: 0;
+}
+
+.bottomLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.bottomLinks span {
+    font-size: 0.78rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.bottomLinks span:hover {
+    color: #aaa;
+}
