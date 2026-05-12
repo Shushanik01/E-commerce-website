@@ -3,9 +3,12 @@ import styles from './cart.module.css';
 import { useSelector, useDispatch } from "react-redux";
 import type {RootState} from '../../store/store';
 import { removeFromCart, increase, decrease } from "../../slices/cartSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import CheckoutForm from "../../components/checkoutForm/checkoutForm";
+
 
 const CartPage = ()=>{
+    const [showCheckout, setShowCheckout] = useState(false)
 
     const items = useSelector((state:RootState) => state.cart.items);
 
@@ -60,11 +63,24 @@ const CartPage = ()=>{
                     >
                         Remove
                     </button>
+
                 </div>
             </div>
         ))}
     </div>
+    <button
+    className={styles.checkout}
+    onClick={()=> setShowCheckout(true)}
+    >Checkout</button>
 </div>
+{showCheckout && (
+    <div className={styles.modalBackdrop} onClick={() => setShowCheckout(false)}>
+        <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+            <button className={styles.closeBtn} onClick={() => setShowCheckout(false)}>✕</button>
+            <CheckoutForm />
+        </div>
+    </div>
+)}
         </Fragment>
     )
 }

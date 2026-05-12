@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "./header/header";
 import Footer from "./footer/footer";
 import CartBar from "../cartIcon/cartBar";
+import Toast from "../toast/Toast";
 
 const Layout = ()=>{
 
@@ -18,6 +19,7 @@ const Layout = ()=>{
             </main>
 
             <Footer/>
+            <Toast/>
         </>
     )
 

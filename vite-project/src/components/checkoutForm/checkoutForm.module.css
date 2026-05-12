@@ -1,0 +1,214 @@
+.wrapper {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+/* ── Left: form ── */
+.formSection {
+    flex: 1;
+    min-width: 0;
+}
+
+.sectionTitle {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6b7280;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+}
+
+.subheading {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 28px;
+}
+
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 20px 0;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.field input {
+    padding: 10px 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    background: #f9fafb;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.field input:focus {
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.field input::placeholder {
+    color: #9ca3af;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+}
+
+.row .field {
+    flex: 1;
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.cardIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #374151;
+    background: #f9fafb;
+    letter-spacing: 0.02em;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+    letter-spacing: 0.01em;
+}
+
+.submitBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.submitBtn:active {
+    transform: scale(0.98);
+}
+
+/* ── Right: order summary ── */
+.summary {
+    width: 240px;
+    flex-shrink: 0;
+    background: #f9fafb;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summaryTitle {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.summaryItemName {
+    color: #374151;
+    flex: 1;
+    line-height: 1.4;
+}
+
+.summaryItemPrice {
+    color: #6b7280;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.summaryDivider {
+    height: 1px;
+    background: #e5e7eb;
+}
+
+.summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    padding-top: 4px;
+}
