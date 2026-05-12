@@ -13,10 +13,15 @@ const Header = () => {
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
                         <li
+                        onClick={()=> navigate('/')}
+                        >
+                            All products
+                        </li>
+                        <li
                         onClick={()=> navigate('men')}
                         >Man's clothing</li>
                         <li 
-                        onClick={()=> navigate('woamen')}
+                        onClick={()=> navigate('women')}
                         >Woman's clothing</li>
                         <li
                         onClick={()=> navigate('jewelery')}
@@ -25,7 +30,9 @@ const Header = () => {
                         onClick={()=> navigate('electronics')}
                         >Electronics</li>
                     </ul>
-                    <span className={styles.viewCart}>View Cart</span>
+                    <span className={styles.viewCart}
+                    onClick={()=> navigate('cart')}
+                    >View Cart</span>
                 </nav>
             </header>
         </Fragment>
