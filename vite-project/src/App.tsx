@@ -7,6 +7,7 @@ import CartPage from "./pages/cartPage/CartPage";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/layout";
 import ManSection from "./pages/ManSection/manSection";
+import CategoryPage from "./pages/categoryPage/categoryPage";
 
 function App() {
 
@@ -17,7 +18,10 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Products/>}/>
             <Route path="cart" element={<CartPage/>}/>
-            <Route path="manSection" element={<ManSection/>}/>
+            <Route path="men" element={<ManSection/>}/>
+            <Route path="women" element={<CategoryPage category="women's clothing"/>}/>
+            <Route path="jewelery" element={<CategoryPage category="jewelery"/>}/>
+            <Route path="electronics" element={<CategoryPage category="electronics"/>}/>
           </Route>
         </Routes>
       </Provider>

@@ -13,11 +13,17 @@ const Header = () => {
                 <nav className={styles.nav}>
                     <ul className={styles.navList}>
                         <li
-                        onClick={()=> navigate('manSection')}
+                        onClick={()=> navigate('men')}
                         >Man's clothing</li>
-                        <li>Woman's clothing</li>
-                        <li>Jewelery</li>
-                        <li>Electronics</li>
+                        <li 
+                        onClick={()=> navigate('woamen')}
+                        >Woman's clothing</li>
+                        <li
+                        onClick={()=> navigate('jewelery')}
+                        >Jewelery</li>
+                        <li
+                        onClick={()=> navigate('electronics')}
+                        >Electronics</li>
                     </ul>
                     <span className={styles.viewCart}>View Cart</span>
                 </nav>

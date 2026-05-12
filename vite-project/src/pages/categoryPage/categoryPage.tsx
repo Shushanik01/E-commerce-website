@@ -57,3 +57,4 @@ const CategoryPage = ({ category }: { category: string }) => {
         </div>
     )
 }
+export default CategoryPage
