@@ -1,7 +1,10 @@
 import { Fragment } from "react/jsx-runtime";
 import styles from './product.module.css';
-import { useSelector } from "react-redux";
-import type { RootState } from "../../store/store";
+import { useSelector, useDispatch } from "react-redux";
+import type { RootState, AppDispatch } from "../../store/store";
+import { useEffect } from "react";
+import { fetchProducts } from "../../slices/productSlice";
+import { addToCart } from "../../slices/cartSlice";
 
 
 const Products = ()=>{
@@ -9,6 +12,12 @@ const Products = ()=>{
     const data = useSelector((state:RootState)=> state.products.data);
     const error = useSelector((state:RootState) => state.products.error);
     const loading = useSelector((state: RootState)=> state.products.loading)
+
+    const dispatch = useDispatch<AppDispatch>();
+
+    useEffect(()=>{
+        dispatch(fetchProducts())
+    },[])
 
  return (
         <Fragment>
@@ -46,7 +55,10 @@ const Products = ()=>{
                     <p className={styles.category}>
                         {item.category}
                     </p>
-
+                    <button
+                    className={styles.add}
+                    onClick={()=>dispatch(addToCart(item))}
+                    >Add to cart</button>
                     <div className={styles.rating}>
                         <p>⭐ {item.rating.rate}</p>
                         <p>🛒 {item.rating.count}</p>

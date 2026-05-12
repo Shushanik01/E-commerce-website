@@ -1,11 +1,16 @@
 import { Fragment } from "react/jsx-runtime";
 import styles from './cart.module.css';
-import { useSelector } from "react-redux";
-import type {RootState} from '../../store/store'
+import { useSelector, useDispatch } from "react-redux";
+import type {RootState} from '../../store/store';
+import { removeFromCart, increase, decrease } from "../../slices/cartSlice";
+import { useEffect } from "react";
 
 const CartPage = ()=>{
 
-    const items = useSelector((state:RootState) => state.cart.items)
+    const items = useSelector((state:RootState) => state.cart.items);
+
+    const dispatch = useDispatch();
+
 
     return(
         <Fragment>
@@ -37,16 +42,22 @@ const CartPage = ()=>{
                     </p>
 
                     <div className={styles.controls}>
-                        <button>-</button>
+                        <button
+                        onClick={()=>dispatch(decrease(item))}
+                        >-</button>
 
                         <span>
                             {item.quantity}
                         </span>
 
-                        <button>+</button>
+                        <button
+                        onClick={()=> dispatch(increase(item))}
+                        >+</button>
                     </div>
 
-                    <button>
+                    <button
+                    onClick={()=> dispatch(removeFromCart(item))}
+                    >
                         Remove
                     </button>
                 </div>
