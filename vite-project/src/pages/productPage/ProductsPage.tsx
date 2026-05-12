@@ -5,6 +5,7 @@ import type { RootState, AppDispatch } from "../../store/store";
 import { useEffect } from "react";
 import { fetchProducts } from "../../slices/productSlice";
 import { addToCart } from "../../slices/cartSlice";
+import CartBar from "../../components/cartIcon/cartBar";
 
 
 const Products = ()=>{
@@ -65,6 +66,7 @@ const Products = ()=>{
                     </div>
                 </div>
             ))}
+            <CartBar/>
         </div>
     )}
            

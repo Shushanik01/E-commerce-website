@@ -15,7 +15,7 @@ const CartBar = () => {
 
     const [isOpen, setIsopen] = useState<boolean>(false);
 
-    const handleOpen = ()=>{
+    const handleOpen = () => {
         setIsopen(true)
     };
     const handleClose = () => setIsopen(false);
@@ -25,11 +25,19 @@ const CartBar = () => {
     const dispatch = useDispatch()
     return (
         <Fragment>
-            <img
-                src={shoppingCart}
-                onClick={handleOpen}
-                className={styles.image}
-            />
+            <div className={styles.cartWrapper}>
+                {items.length > 0 ?
+                    <div className={styles.badge}>
+                        {items.reduce((acc,item)=> acc + item.quantity, 0)}
+                    </div>
+                    : null}
+
+                <img
+                    src={shoppingCart}
+                    onClick={handleOpen}
+                    className={styles.cartImage}
+                />
+            </div>
 
             {isOpen && (
                 <div
@@ -38,10 +46,10 @@ const CartBar = () => {
                 />
             )}
 
-         
+
             {isOpen && (
                 <div className={styles.container}>
-                    
+
                     <h2>Cart</h2>
 
                     {items.length === 0 ? (
@@ -102,7 +110,7 @@ const CartBar = () => {
                     )}
                 </div>
             )}
-        
+
 
         </Fragment>
     )
