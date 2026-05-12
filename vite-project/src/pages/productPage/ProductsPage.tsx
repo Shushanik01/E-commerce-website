@@ -14,6 +14,9 @@ const Products = ()=>{
     const error = useSelector((state:RootState) => state.products.error);
     const loading = useSelector((state: RootState)=> state.products.loading)
 
+console.log(data);
+
+
     const dispatch = useDispatch<AppDispatch>();
 
     useEffect(()=>{
